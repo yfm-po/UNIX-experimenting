@@ -1,0 +1,31 @@
+V prípade otvorenia ešte neexistujúceho súboru s parametrami O_CREAT | O_EXCL sa nám podarí vytvoriť nový file, môžeme vypísať nový deskriptor súboru, errno má hodnotu 0, "perror()" a "strerr(error)" vrátia "No error"
+
+Case when opening a non existing file with O_CREAT | O_EXCL =>
+New file descriptor => 3
+errno: 0
+perror(): : No error
+strerror(): No error
+
+V prípade otvorenia už existujúceho súboru s parametrami O_CREAT | O_EXCL sa nám nepodarý otvoriť súbor, nový deskriptor súboru je -1, errno má hodnotu 17, čo znamená "EEXIST	File exists",  "perror()" a "strerr(error)" vrátia "File exists"
+
+Case when opening an already existing file with O_CREAT | O_EXCL =>
+New file descriptor => -1
+errno: 17
+perror(): : File exists
+strerror(): File exists
+
+V prípade otvorenia ešte neexistujúceho súboru bez parametrov O_CREAT | O_EXCL sa nám nepodarí otvoriť/vytvoriť súbor, nový deskriptor súboru bude -1, errno má hodnotu 2, čo znamená "ENOENT 2 No such file or directory", "perror()" a "strerr(error)" vrátia "No such file or directory"
+
+Case when opening a non existing file without O_CREAT | O_EXCL =>
+New file descriptor => -1
+errno: 2
+perror(): : No such file or directory
+strerror(): No such file or directory
+
+V prípade otvorenia už existujúceho súboru bez parametrov O_CREAT | O_EXCL sa nám podarí otvoriť súbor, môžeme vypísať nový deskriptor súboru, errno má hodnotu 22, čo znamená "EISDIR	Is a directory", "perror()" a "strerr(error)" vrátia "Invalid argument"
+
+Case when opening an already existing file without O_CREAT | O_EXCL =>
+New file descriptor => 3
+errno: 22
+perror(): : Invalid argument
+strerror(): Invalid argument

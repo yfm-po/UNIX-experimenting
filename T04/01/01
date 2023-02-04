@@ -1,0 +1,7 @@
+Ďalšie možnosti, ktoré existujú v nastavení prístupových práv, sú „suid“, „sgid“ a „sticky bit“.
+
+Možnosť „suid“ umožňuje spustiť program s povoleniami vlastníka programu.
+
+Možnosť „sgid“ umožňuje spustenie programu s povoleniami skupiny, do ktorej program patrí.
+
+Možnosť „sticky bit“ zabraňuje vymazaniu programu niekým iným ako vlastníkom programu.

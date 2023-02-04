@@ -1,0 +1,16 @@
+output:
+
+Parent process
+Child process
+pPID = 132
+chPID = 133
+pPPID = 9
+chPPID = 132
+
+Rodičovský proces je ten, ktorý vytvára podriadený proces. 
+Rodičovský proces je ten, ktorý volá funkciu fork(). 
+Podradený proces je ten, ktorý je vytvorený funkciou fork(). 
+Nadradený proces a podriadený proces majú odlišné ID procesu. 
+Nadradený proces má ID procesu 132 a podriadený proces má ID procesu 133. 
+Nadradený proces a podriadený proces majú odlišné ID rodičovského procesu. 
+Nadradený proces má ID nadradeného procesu 9 a podriadený proces má ID nadradeného procesu 132.

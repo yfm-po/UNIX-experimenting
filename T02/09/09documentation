@@ -1,0 +1,41 @@
+V prípade použitia lseek() presun 10 bajtov súborového kurzora do prava od jeho aktuálnu pozíciu(v mojom prípade to bolo na začiatku teraz) lseek vrátil hodnotu 10, errno má hodnotu 0, perror() a strerr(errno) vrátia No error
+
+lseek From Actual Position 10 bytes: 10
+errno: 0
+perror(): : No error
+strerror(): No error
+
+V prípade použitia lseek() presun 10 bajtov súborového kurzora do ľava od jeho aktuálnu pozíciu lseek vrátil hodnotu 0, errno má hodnotu 0, perror() a strerr(errno) vrátia No error
+
+lseek From Actual Position - 10 bytes: 0
+errno: 0
+perror(): : No error
+strerror(): No error
+
+V prípade použitia lseek90 presun 10 bajtov súborového kurzora do prava od začiatok súboru pozíciu lseek vrátil hodnotu 10, errno má hodnotu 0, perror() a strerr(errno) vrátia No error
+
+lseek From Beginning 10 bytes: 10
+errno: 0
+perror(): : No error
+strerror(): No error
+
+V prípade použitia lseek() presun 10 bajtov súborového kurzora do ľava od začiatok súboru lseek vrátil hodnotu -1, errno má hodnotu 22, perror() a strerr(errno) vrátia Invalid argument
+
+lseek From Beginning - 10 bytes: -1
+errno: 22
+perror(): : Invalid argument
+strerror(): Invalid argument
+
+V prípade použitia lseek() presun 10 bajtov súborového kurzora do prava od konca súboru lseek vrátil hodnotu 43, errno má hodnotu 22, perror() a strerr(errno) vrátia Invalid argument
+
+lseek From End 10 bytes: 43
+errno: 22
+perror(): : Invalid argument
+strerror(): Invalid argument
+
+V prípade použitia lseek() presun 10 bajtov súborového kurzora do ľava od konca súboru lseek vrátil hodnotu 23, errno má hodnotu 22, perror() a strerr(errno) vrátia Invalid argument
+
+lseek From End - 10 bytes: 23
+errno: 22
+perror(): : Invalid argument
+strerror(): Invalid argument

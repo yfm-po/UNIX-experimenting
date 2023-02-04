@@ -1,0 +1,13 @@
+Kopírovanie po megabajtových blokoch funguje výborne, s takou istou metodou ako kopírovanie znak po znaku, len namiesto 1 bajt som používal 1024.
+(content infile-u som vymazal, lebo som to otestoval s 5MB súborom)
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/07$ ls -l infile
+-rwxrwxrwx 1 patrick patrick 5242880 Oct  7 02:47 infile
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/07$ ls -l outfile
+-rwxrwxrwx 1 patrick patrick 0 Oct  7 02:53 outfile
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/07$ ./07 <infile >outfile
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/07$ ls -l outfile
+-rwxrwxrwx 1 patrick patrick 5242911 Oct  7 02:56 outfile

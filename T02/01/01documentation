@@ -1,0 +1,31 @@
+V prípade otvorenia ešte neexistujúceho súboru s parametrom O_CREAT sa nám podarí vytvoriť nový file, môžeme vypísať nový deskriptor súboru, errno má hodnotu 0, "perror()" a "strerr(error)" vrátia "Success"
+
+Case when opening a non existing file with O_CREAT =>
+New file descriptor => 3
+errno: 0
+perror(): : Success
+strerror(): Success
+
+V prípade otvorenia už existujúceho súboru s parametrom O_CREAT sa nám podarý otvoriť súbor, môžeme vypísať nový deskriptor súboru, errno má hodnotu 0, "perror()" a "strerr(error)" vrátia "Success"
+
+Case when opening an already existing file with O_CREAT =>
+New file descriptor => 4
+errno: 0
+perror(): : Success
+strerror(): Success
+
+V prípade otvorenia ešte neexistujúceho súboru bez parametra O_CREAT sa nám nepodarí otvoriť/vytvoriť súbor, nový deskriptor súboru bude -1, errno má hodnotu 2, čo znamená "ENOENT 2 No such file or directory", "perror()" a "strerr(error)" vrátia "No such file or directory"
+
+Case when opening a non existing file without O_CREAT =>
+New file descriptor => -1
+errno: 2
+perror(): : No such file or directory
+strerror(): No such file or directory
+
+V prípade otvorenia už existujúceho súboru bez parametra O_CREAT sa nám podarí otvoriť súbor, môžeme vypísať nový deskriptor súboru, errno má hodnotu 2, čo znamená "ENOENT 2 No such file or directory", "perror()" a "strerr(error)" vrátia "No such file or directory"
+
+Case when opening an already existing file without O_CREAT =>
+New file descriptor => 3
+errno: 2
+perror(): : No such file or directory
+strerror(): No such file or directory

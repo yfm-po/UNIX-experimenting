@@ -1,0 +1,3 @@
+Hodnoty parametrov cmd pre operácie TCGET a TCSET sú TCGETS a TCSETS. Možno ich nájsť v hlavičkovom súbore <asm/termbits.h>.
+
+https://lore.kernel.org/linux-man/20210801135146.14849-1-pali@kernel.org/

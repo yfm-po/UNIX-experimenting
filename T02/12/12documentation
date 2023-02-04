@@ -1,0 +1,15 @@
+V tomto prípade som prerobil predošlý program na konzolové argumenty/prepínače, máme zadať meno vstupného súboru, daný charakter, počet, že koľko bajtov chceme prepísať a pozíciu, od ktorej to chceme začať.
+
+
+Pouzivanie: ./12 vstup <charakter> <počet bajtov> <lseek pozícia>
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/12 (main)
+$ cat infile
+This is the content of the infile
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/12 (main)
+$ ./12.exe infile B 5 13
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/12 (main)
+$ cat infile
+This is the cBBBBBt of the infile

@@ -1,0 +1,5 @@
+V súbore, ktorý používa alternatívne názvy súboru zápis do kanála, spojeného s jedným z mien súboru, skutočne ovplyvňuje obsah súboru videného pod alternatívnym menom. Je to pravda, som to otestoval s písaním do pôvodného súboru a vypísaním obsahu alternatívnych súborov.
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/os-DOMACE/T02/os2022-sr0910-usr/T03/05$ ./05
+file2: Hello 
+file3: Hello

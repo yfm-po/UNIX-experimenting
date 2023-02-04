@@ -1,0 +1,12 @@
+Kopírovanie znak po znaku funguje výborne použitím argumentu STDIN_FILENO a STDOUT_FILENO v read() a write(). Tieto argumenty nám umožnia načítať zo štandardného vstupu a zapísať do štandardného výstupu.
+
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/06$ cat infile
+this is the content of infile
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/06$ cat outfile
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/06$ ./06 <infile >outfile
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/06$ cat outfile
+this is the content of infile

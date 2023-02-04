@@ -1,0 +1,20 @@
+V prípade kopírovania zo súboru infile do súboru outfile 5 megabajtov, bajt po bajt to trvalo 114 sekund
+
+(obsahy súborov som vymazal, lebo som to otestoval s 5MB-ovými súbormi)
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/08$ ls -l infile
+-rwxrwxrwx 1 patrick patrick 5242880 Oct  7 03:11 infile
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/08$ ./08_1
+Time taken for copying 5megabytes from infile to outfile 1 byte at a time: 114 seconds
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/08$ ls -l outfile
+-rwxrwxrwx 1 patrick patrick 5242880 Oct  7 12:01 outfile
+
+V prípade kopírovania zo súboru infile do súboru outfile2 5 megabajtov, po 1megabajtovych blokoch to trvalo 0 sekund
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/08$ ./08_2
+Time taken for copying 5megabytes from infile to outfile in 1MB blocks at a time: 0 seconds
+
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/08$ ls -l outfile2
+-rwxrwxrwx 1 patrick patrick 5242880 Oct  7 12:01 outfile2

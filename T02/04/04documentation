@@ -1,0 +1,9 @@
+V prípade načítania súboru velkosťi 7 bajtov s read() nastavene na načítanie 10 bajtov nedostaneme žiadny error, úspešne sa dá načítať tých 7 bajtov do buffra, nedostaneme žiadne znaky do toho navyše, errno má hodnotu 0, perror() a strerror(errno) vrátia No error
+
+Opening the given file =>
+Allocating buffer and reading content into it with 3 more bytes size => 
+return value of read(): 7
+Content of the buffer is => 1234567
+errno: 0
+perror(): : No error
+strerror(): No error

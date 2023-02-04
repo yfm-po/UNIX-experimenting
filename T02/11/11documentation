@@ -1,0 +1,12 @@
+V prípade prepísania 3 znakov od pozície 10 znakmy "A" nám stačí posunuť kurzor po 9. bajt, vytvoriť 3bajtový buffer, do toho pridať "AAA" a následne to napísať do infile pomocou write.
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/11 (main)
+$ cat infile
+this is the infile's content without any uppercase letters
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/11 (main)
+$ ./11.exe
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/11 (main)
+$ cat infile
+this is tAAAinfile's content without any uppercase letters

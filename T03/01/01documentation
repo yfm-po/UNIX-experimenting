@@ -1,0 +1,6 @@
+Po zduplikovaní deskriptora súboru službou dup() sa zapamätá pozícia kurzora aj v alternatívom kanáli, som to otestoval posunutím kurzora o 10 bajtov v pôvodnom kanáli a potom získaním pozície kurzora v alternatívom kanáli. Pozície je rovnaké.
+
+$ ./01.exe
+Current Position of fd: 10
+Current Position of fd2: 10
+Cursor position is remembered in the alternate channel

@@ -1,0 +1,3 @@
+Spôsôb, ako zobraziť aktuálne prostredie v termináli je napríklad command "env";
+
+V jazyku C ich môžeme vypísať z tretieho argumentu env typu char** (pole ukazovateľov na reťazce znakov) funkcie main.

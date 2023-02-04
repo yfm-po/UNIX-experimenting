@@ -1,0 +1,3 @@
+patrick@DESKTOP-I4LLMQU:/mnt/c/Users/patri/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T05/08$ ./08
+Child process: i = 1 and pid = 287 and ppid = 286
+Parent process: i = 0 and pid = 286 and ppid = 9

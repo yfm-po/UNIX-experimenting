@@ -1,0 +1,5 @@
+V originálnom a zduplikovanom kanáli sa hodnota súborového kurzora mení súčasne, som to otestoval pomocou načítania do bufferov a zobrazenia ich obsahu.
+
+$ ./02.exe
+fd1: This 
+fd2: is th

@@ -1,0 +1,2 @@
+Špecifickosť spracovania súboru obsahujúceho text uložený v UTF-8 spočíva v tom,
+že súbor musí byť pred spracovaním dekódovaný do Unicode.

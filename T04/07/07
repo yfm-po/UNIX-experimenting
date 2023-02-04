@@ -1,0 +1,10 @@
+Pre úpravu programu na bez-enterové použitie som potreboval tie 3 hlavné úpravy:
+
+1. tcgetattr(STDIN_FILENO,&old_tio);
+Tento riadok kódu získa nastavenia terminálu pre stdin
+
+2. tcsetattr(STDIN_FILENO,TCSANOW,&new_tio);
+Tento riadok kódu okamžite nastaví nové nastavenia
+
+3. new_tio.c_lflag &=(~ICANON & ~ECHO);
+Tento riadok kódu deaktivuje kanonický režim a lokálnu odozvu

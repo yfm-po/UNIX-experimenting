@@ -1,0 +1,9 @@
+V prípade pokusu o načítavaní zo súboru infile, kde kurzor je umiestnený po posledný bajt súboru, read() vráti hodnotu 0, buffer bude obsahovať randomné znaky, errno má hodnotu 0, perror() a strerror(errno) vrátia No error
+
+Opening the given file =>
+After putting the cursor after the last byte of the file, we will try to read content to the buffer =>
+return value of read(): 0
+Content of the buffer is => á|╗
+errno: 0
+perror(): : No error
+strerror(): No error

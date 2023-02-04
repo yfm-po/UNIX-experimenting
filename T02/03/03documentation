@@ -1,0 +1,149 @@
+V prípade otvorenia neexistujúceho súboru s parametrom O_CREAT a mode 0777 môžeme vypísať nový file descriptor, errno má hodnotu 0, perror() a strerror(errno) vrátia No error
+
+Case when opening a non existing file with O_CREAT and mode 0777 =>
+New file descriptor => 3
+errno: 0
+perror(): : No error
+strerror(): No error
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l newlyCreatedFile1
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:32 newlyCreatedFile1
+
+
+
+V prípade otvorenia existujúceho súboru s parametrom O_CREAT a mode 0777 môžeme vypísať nový file descriptor, errno má hodnotu 0, perror() a strerror(errno) vrátia No error
+
+Case when opening an already existing file with O_CREAT and mode 0777 =>
+New file descriptor => 4
+errno: 0
+perror(): : No error
+strerror(): No error
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l existingFile
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:04 existingFile
+
+
+
+V prípade otvorenia neexistujúceho súboru bez parametra O_CREAT a mode 0777 deskriptor súboru bude -1, errno má hodnotu 2, perror() a strerror(errno) vrátia No such file or directory
+
+Case when opening a non existing file without O_CREAT and mode 0777 =>
+New file descriptor => -1
+errno: 2
+perror(): : No such file or directory
+strerror(): No such file or directory
+
+V prípade otvorenia existujúceho súboru bez parametra O_CREAT a mode 0777 môžeme vypísať nový file descriptor, errno má hodnotu 22, perror() a strerror(errno) vrátia Invalid argument
+
+Case when opening an already existing file without O_CREAT and mode 0777 =>
+New file descriptor => 3
+errno: 22
+perror(): : Invalid argument
+strerror(): Invalid argument
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l _existingFile
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:04 _existingFile
+
+
+
+V prípade otvorenia neexistujúceho súboru s parametrom O_CREAT a mode 0666 môžeme vypísať nový file descriptor, errno má hodnotu 9, perror() a strerror(errno) vrátia Bad file descriptor
+
+Case when opening a non existing file with O_CREAT and mode 0666 =>
+New file descriptor => 3
+errno: 9
+perror(): : Bad file descriptor
+strerror(): Bad file descriptor
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l newlyCreatedFile2
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:32 newlyCreatedFile2
+
+
+
+V prípade otvorenia existujúceho súboru s parametrom O_CREAT a mode 0666 môžeme vypísať nový file descriptor, errno má hodnotu 9, perror() a strerror(errno) vrátia Bad file descriptor
+
+Case when opening an already existing file with O_CREAT and mode 0666 =>
+New file descriptor => 4
+errno: 9
+perror(): : Bad file descriptor
+strerror(): Bad file descriptor
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l existingFile
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:04 existingFile
+
+
+
+V prípade otvorenia neexistujúceho súboru bez prepínača O_CREAT a mode 0666 deskriptor súboru bude -1, errno má hodnotu 2, perror() a strerror(errno) vrátia No such file or directory
+
+Case when opening a non existing file without O_CREAT and mode 0666 =>
+New file descriptor => -1
+errno: 2
+perror(): : No such file or directory
+strerror(): No such file or directory
+
+
+V prípade otvorenia existujúceho súboru bez prepínača O_CREAT a mode 0666 môžeme vypísať nový file descriptor, errno má hodnotu 22, perror() a strerror(errno) vrátia Invalid argument 
+
+Case when opening an already existing file without O_CREAT and mode 0666 =>
+New file descriptor => 3
+errno: 22
+perror(): : Invalid argument
+strerror(): Invalid argument
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l _existingFile
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:04 _existingFile
+
+
+
+V prípade otvorenia neexistujúceho súboru s parametrom O_CREAT a mode 0775 môžeme vypísať nový file descriptor, errno má hodnotu 9, perror() a strerror(errno) vrátia Bad file descriptor
+
+Case when opening a non existing file with O_CREAT and mode 0775 =>
+New file descriptor => 3
+errno: 9
+perror(): : Bad file descriptor
+strerror(): Bad file descriptor
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l newlyCreatedFile3
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:32 newlyCreatedFile3
+
+
+
+V prípade otvorenia existujúceho súboru s parametrom O_CREAT a mode 0775 môžeme vypísať nový file descriptor, errno má hodnotu 9, perror() a strerror(errno) vrátia Bad file descriptor
+
+Case when opening an already existing file with O_CREAT and mode 0775 =>
+New file descriptor => 4
+errno: 9
+perror(): : Bad file descriptor
+strerror(): Bad file descriptor
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l existingFile
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:04 existingFile
+
+
+V prípade otvorenia neexistujúceho súboru s parametrom O_CREAT a mode 0775 file descriptor bude -1, errno má hodnotu 2, perror() a strerror(errno) vrátia No such file or directory
+
+Case when opening a non existing file without O_CREAT and mode 0775 =>
+New file descriptor => -1
+errno: 2
+perror(): : No such file or directory
+strerror(): No such file or directory
+
+
+
+V prípade otvorenia existujúceho súboru s parametrom O_CREAT a mode 0775 môžeme vypísať nový file descriptor, errno má hodnotu 22, perror() a strerror(errno) vrátia Invalid argument
+
+Case when opening an already existing file without O_CREAT and mode 0775 =>
+New file descriptor => 3
+errno: 22
+perror(): : Invalid argument
+strerror(): Invalid argument
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/03 (main)
+$ ls -l _existingFile
+-rw-r--r-- 1 patri 197609 0 Oct  7 00:04 _existingFile

@@ -1,0 +1,34 @@
+V prípade umiestnenia kurzoru 1000000 bajtov po posledný bajt lseek vráti hodnotu 1000000, potom read vráti 0, do buffra bolo zapísane v 16kovej sústave 61fdf6
+
+Putting the cursor 1000000 after the last byte of the file => 
+return value of this lseek: 1000000
+return value of this read: 0
+What's in the buffer? (string form) :
+What's in the buffer? (hex form) : 61fdf6
+
+V prípade umiestnenia kurzoru hned po posledný bajt súboru lseek vrátil 0, read vrátil 0, do buffra bolo zapísane v 16kovej sústave 61fdec
+
+Putting the cursor right after the last byte of the file =>
+return value of this lseek: 0
+return value of this read: 10
+What's in the buffer? (string form) : This is th
+What's in the buffer? (hex form) : 61fdec
+
+V prípade z pôvodného miesta súboru read vrátil 10 tak ako má (lebo som načítal 10 bajtov), podarilo sa to vypísať v stringovej forme, aj v šesťnástkovej sústave
+
+The cursor at the original position =>
+return value of this read: 10
+What's in the buffer? (string form) : This is thThis is th
+What's in the buffer? (hex form) : 61fde2
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/10 (main)
+$ ls -l infile
+-rw-r--r-- 1 patri 197609 33 Oct  7 12:18 infile
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/10 (main)
+$ ls -l infile2
+-rw-r--r-- 1 patri 197609 33 Oct  7 12:18 infile2
+
+patri@DESKTOP-I4LLMQU MINGW64 ~/Documents/OS/OS-domace/T02/os2022-sr0910-usr/T02/10 (main)
+$ ls -l infile3
+-rw-r--r-- 1 patri 197609 33 Oct  7 12:18 infile3
